@@ -8,7 +8,7 @@ import { DataTableDemo } from "@/components/shared/dashboard-table-transaction_u
 
 export default function Dashboard() {
     
-  const [date, setDate] = React.useState<Date | undefined>(new Date())
+//   const [date, setDate] = React.useState<Date | undefined>(new Date())
   
   return (
     <>
