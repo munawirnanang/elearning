@@ -10,7 +10,7 @@ import {
 
 
 export default function Course() {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
+//   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
     <>

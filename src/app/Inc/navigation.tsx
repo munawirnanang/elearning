@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { MenubarDemo } from "@/components/shared/homepage-navigation-menubar"
+// import { MenubarDemo } from "@/components/shared/homepage-navigation-menubar"
 import { NavigationMenuDemo } from "@/components/shared/homepage-navigation-menu"
 import { NavigationMenuDemo2 } from "@/components/shared/homepage-navigation-menu-2"
 import { Toggle } from "@/components/ui/toggle"
@@ -18,21 +18,21 @@ import { Label } from "@/components/ui/label"
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
+  // DialogDescription,
+  // DialogFooter,
+  // DialogHeader,
+  // DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import {
-  Menubar,
-  MenubarContent,
-  MenubarItem,
-  MenubarMenu,
-  MenubarSeparator,
-  MenubarShortcut,
-  MenubarTrigger,
-} from "@/components/ui/menubar"
+// import {
+//   Menubar,
+//   MenubarContent,
+//   MenubarItem,
+//   MenubarMenu,
+//   MenubarSeparator,
+//   MenubarShortcut,
+//   MenubarTrigger,
+// } from "@/components/ui/menubar"
 import {
   Tabs,
   TabsContent,
@@ -44,8 +44,8 @@ import {
   CardContent,
   CardDescription,
   CardFooter,
-  CardHeader,
-  CardTitle,
+  // CardHeader,
+  // CardTitle,
 } from "@/components/ui/card"
 
 export default function Navigation() {
@@ -118,7 +118,7 @@ export default function Navigation() {
                             <div className="w-full text-center">
                               <Button type="button" className="w-full my-2">Log In</Button>
                               <Button type="button" variant="secondary" className="w-full my-2">Log In With Google</Button>
-                              Don't have an account?
+                              Do not have an account?
                               <TabsList className="bg-transparent">
                                 <TabsTrigger className="hover:underline" value="signup">Sign Up</TabsTrigger>
                               </TabsList>
@@ -199,7 +199,7 @@ export default function Navigation() {
                             <div className="w-full text-center">
                               <Button type="button" className="w-full my-2">Log In</Button>
                               <Button type="button" variant="secondary" className="w-full my-2">Log In With Google</Button>
-                              Don't have an account? 
+                              Do not have an account? 
                               <TabsList className="bg-transparent">
                                 <TabsTrigger className="hover:underline" value="signup">Sign Up</TabsTrigger>
                               </TabsList>

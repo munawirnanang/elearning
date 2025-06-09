@@ -8,7 +8,7 @@ import { CheckIcon, HandThumbUpIcon, UserIcon } from '@heroicons/react/20/solid'
 const subtotal = '$210.00'
 const discount = { code: 'CHEAPSKATE', amount: '$24.00' }
 const taxes = '$23.68'
-const shipping = '$22.00'
+// const shipping = '$22.00'
 const total = '$341.68'
 
 const product = {
@@ -90,7 +90,7 @@ const timeline = [
     },
 ]
 
-const reviews = {
+/* const reviews = {
   average: 4,
   featured: [
     {
@@ -119,8 +119,8 @@ const reviews = {
     },
     // More reviews...
   ],
-}
-const faqs = [
+} */
+/* const faqs = [
   {
     question: 'What format are these icons?',
     answer:
@@ -132,8 +132,8 @@ const faqs = [
       "Yes. The icons are drawn on a 24 x 24 pixel grid, but the icons can be scaled to different sizes as needed. We don't recommend going smaller than 20 x 20 or larger than 64 x 64 to retain legibility and visual balance.",
   },
   // More FAQs...
-]
-const license = {
+] */
+/* const license = {
   href: '#',
   summary:
     'For personal and professional use. You cannot resell or redistribute these icons in their original or modified state.',
@@ -161,7 +161,7 @@ const license = {
     <li>Don\'t be evil. These icons cannot be used on websites or applications that promote illegal or immoral beliefs or activities.</li>
     </ul>
   `,
-}
+} */
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')

@@ -1,4 +1,4 @@
-import { Separator } from "@/components/ui/separator"
+// import { Separator } from "@/components/ui/separator"
 import {
     Accordion,
     AccordionContent,
@@ -30,7 +30,7 @@ export default function Faq() {
                 <AccordionItem value="item-3">
                     <AccordionTrigger className="text-base font-semibold leading-7 text-primary">Is it animated?</AccordionTrigger>
                     <AccordionContent>
-                    Yes. It's animated by default, but you can disable it if you prefer.
+                    Yes. It is animated by default, but you can disable it if you prefer.
                     </AccordionContent>
                 </AccordionItem>
                 </Accordion>

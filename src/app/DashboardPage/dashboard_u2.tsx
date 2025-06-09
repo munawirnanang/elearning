@@ -85,7 +85,7 @@ export default function Dashboard() {
                 <div className='col-start-1 col-span-12 md:col-start-7 md:col-span-6 mt-6 md:mt-0 mb-10 md:mb-0'>
                     <div className='flex justify-between items-center'>
                         <h2 className='text-lg lg:text-2xl font-normal'>Your On Going Courses</h2>
-                        <p className='self-center'><Button variant="link" className='text-blue-600 text-md lg:text-lg'>see more ></Button></p>   
+                        <p className='self-center'><Button variant="link" className='text-blue-600 text-md lg:text-lg'>see more </Button></p>   
                     </div>
                     <div className="overflow-hidden rounded-2xl bg-[#FFDDDD] ring-1 ring-primary drop-shadow-[5px_5px_rgba(0,0,0,1)] h-28 mt-2 mb-4">
                         <div className="px-3 py-3 sm:px-4 sm:py-3">
@@ -168,7 +168,7 @@ export default function Dashboard() {
             <div className='col-span-12 md:col-start-1 md:col-span-6 mb-4 md:mb-0'>
                 <div className='flex justify-between items-center mb-2'>
                     <h2 className='text-lg lg:text-2xl font-normal'>Transaction</h2>
-                    <p className='self-center'><Button variant="link" className='text-blue-600 text-md lg:text-lg'>see more ></Button></p>   
+                    <p className='self-center'><Button variant="link" className='text-blue-600 text-md lg:text-lg'>see more </Button></p>   
                 </div>
                 {/* <div className="overflow-x-auto overflow-y-auto rounded-2xl bg-white ring-1 ring-primary drop-shadow-[5px_5px_rgba(0,0,0,1)] h-80"> */}
                 <div className="rounded-2xl ring-1 ring-primary bg-white drop-shadow-[5px_5px_rgba(0,0,0,1)]">
@@ -190,7 +190,7 @@ export default function Dashboard() {
             <div className='col-span-12 md:col-start-7 md:col-span-6'>
                 <div className='flex justify-between items-center mb-2'>
                     <h2 className='text-lg lg:text-2xl font-normal'>Schedule</h2>
-                    <p className='self-center'><Button variant="link" className='text-blue-600 text-md lg:text-lg'>see more ></Button></p>   
+                    <p className='self-center'><Button variant="link" className='text-blue-600 text-md lg:text-lg'>see more </Button></p>   
                 </div>
                 {/* <div className="overflow-x-auto overflow-y-auto rounded-2xl bg-white ring-1 ring-primary drop-shadow-[5px_5px_rgba(0,0,0,1)] h-80"> */}
                 <div className="rounded-2xl ring-1 ring-primary bg-white drop-shadow-[5px_5px_rgba(0,0,0,1)]">

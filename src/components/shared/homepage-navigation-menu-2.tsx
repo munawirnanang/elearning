@@ -1,14 +1,14 @@
 import Link from "next/link"
 import {
     NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuIndicator,
+    // NavigationMenuContent,
+    // NavigationMenuIndicator,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
-    NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
-    NavigationMenuViewport,
+    // NavigationMenuTrigger,
+    // navigationMenuTriggerStyle,
+    // NavigationMenuViewport,
   } from "@/components/ui/navigation-menu"
 
 export function NavigationMenuDemo2() {
