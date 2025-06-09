@@ -10,7 +10,7 @@ import Products from '@/app/ProductPage/products';
 
 import DetailProduct from '@/app/DetailProductPage/detailProduct';
 
-// import Dashboard from '@/app/DashboardPage/dashboard_u2';
+import Dashboard from '@/app/DashboardPage/dashboard_u2';
 
 import Course from '@/app/CoursePage/course';
 
@@ -29,7 +29,7 @@ export default function Home () {
       <Testimonials />
       <Products />
       <DetailProduct />
-{/*       <Dashboard /> */}
+      <Dashboard />
       <Course />
       <Listcourse />
       <Formcourse />

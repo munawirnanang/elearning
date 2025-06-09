@@ -4,7 +4,6 @@ import * as React from "react"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Calendar } from "@/components/ui/calendar"
 import { DataTableDemo } from "@/components/shared/dashboard-table-transaction_u2"
 
 export default function Dashboard() {
@@ -195,22 +194,10 @@ export default function Dashboard() {
                 </div>
                 {/* <div className="overflow-x-auto overflow-y-auto rounded-2xl bg-white ring-1 ring-primary drop-shadow-[5px_5px_rgba(0,0,0,1)] h-80"> */}
                 <div className="rounded-2xl ring-1 ring-primary bg-white drop-shadow-[5px_5px_rgba(0,0,0,1)]">
-                <div className="p-4">
-                    <div className="px-2">
-                    <div className="flow-root">
-                        <div className="-mx-4 sm:-mx-6 lg:-mx-8">
-                            <div className="inline-block min-w-full align-middle px-3 md:px-10">
-                                <Calendar
-                                    mode="single"
-                                    selected={date}
-                                    onSelect={setDate}
-                                    className="rounded-md border shadow"
-                                />
-                            </div>
+                    <div className="p-4">
+                        <div className="px-2">
                         </div>
                     </div>
-                    </div>
-                </div>
                 </div>
 
             </div>
