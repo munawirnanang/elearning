@@ -49,6 +49,21 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(to right, #e5e7eb 8%, #f3f4f6 18%, #e5e7eb 33%);
+  background-size: 200% 100%;
+}
+
 :root {
   --radius: 0rem;
   --background: oklch(1 0 0);
