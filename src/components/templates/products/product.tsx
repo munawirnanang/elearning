@@ -82,7 +82,7 @@ const products = [
     return (
       <div className="mt-28 mb-10">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 py-8 sm:py-8 lg:max-w-7xl">
-          <p className="text-3xl font-semibold tracking-tight text-primary sm:text-4xl">Our Recommendation</p>
+          <p className="text-2xl lg:text-4xl  font-semibold tracking-tight text-primary pb-6">Our Recommendation</p>
           <div className="mt-6 grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-3">
             {loading ?
               Array.from({length: 6 }).map((_, i) => (

@@ -80,7 +80,7 @@ export default function Navigation() {
             <div className="bg-[rgb(25,36,65)] dark:bg-transparent dark:border-b dark:border-primary">
               <div className="flex justify-between overflow-x-auto flex-nowrap whitespace-nowrap">
                 <NavigationMenuDemo2 />
-                <div className="hidden md:block self-center w-1/2">
+                <div className="hidden md:block self-center">
                   <div className="inline-block">
                     <span className="text-white">
                       Selamat datang di <span className="text-yellow-400">Teman Belajar</span> — Platform pengembangan soft skill terlengkap yang siap mendukung setiap langkah sukses Anda!
@@ -272,7 +272,7 @@ export default function Navigation() {
             <div className="bg-[rgb(25,36,65)] dark:bg-transparent dark:border-b dark:border-primary">
               <div className="flex justify-between">
                 <NavigationMenuDemo2 />
-                <div className="overflow-hidden whitespace-nowrap self-center w-1/2">
+                <div className="overflow-hidden whitespace-nowrap self-center w-1/3">
                   <div className="inline-block marquee">
                     <span className="text-white">Selamat datang di <span className="text-yellow-400">Teman Belajar</span> — Platform pengembangan soft skill terlengkap yang siap mendukung setiap langkah sukses Anda!</span>
                   </div>

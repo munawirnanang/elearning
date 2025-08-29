@@ -43,6 +43,13 @@ export function NavigationMenuDemo2() {
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
+                <NavigationMenuItem>
+                    <Link href="#" legacyBehavior passHref>
+                        <NavigationMenuLink className={`${pathname === "/" ? "bg-white text-black" : "bg-outline text-white"} hover:bg-white hover:text-black dark:bg-accent dark:hover:bg-white dark:hover:text-black`}>
+                            Creator Mode
+                        </NavigationMenuLink>
+                    </Link>
+                </NavigationMenuItem>
             </NavigationMenuList>
         </NavigationMenu>
 

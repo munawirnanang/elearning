@@ -1,10 +1,67 @@
 'use client'
 
-// import { useState } from 'react'
+import * as React from "react"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { DataTableDemo } from "@/components/shared/table-transaction/table-transaction_u1"
+import { DataTableDemo } from "@/components/shared/table-transaction/table-transaction_u2"
+import { MoveRight } from "lucide-react"
+
+// import { TrendingUp } from "lucide-react"
+import { LabelList, RadialBar, RadialBarChart } from "recharts"
+
+import Link from "next/link"
+
+// import { Calendar } from "@/components/ui/calendar"
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+//   CardFooter,
+  CardHeader,
+//   CardTitle,
+} from "@/components/ui/card"
+
+import {
+  ChartConfig,
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@/components/ui/chart"
+
+export const description = "A radial chart with a label"
+
+const chartData = [
+  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
+  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
+  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
+  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
+  { browser: "other", visitors: 90, fill: "var(--color-other)" },
+]
+
+const chartConfig = {
+  visitors: {
+    label: "Visitors",
+  },
+  chrome: {
+    label: "Digital Marketing Untuk Pemula",
+    color: "var(--chart-1)",
+  },
+  safari: {
+    label: "Google For Business",
+    color: "var(--chart-2)",
+  },
+  firefox: {
+    label: "Budidaya Lele Omset 10 Juta",
+    color: "var(--chart-3)",
+  },
+  other: {
+    label: "Other",
+    color: "var(--chart-5)",
+  },
+} satisfies ChartConfig
+
 
 export default function Dashboard() {
 
@@ -74,16 +131,73 @@ export default function Dashboard() {
             <div className='grid grid-cols-12 md:gap-10'>
             
                 <div className='col-start-1 col-span-12 md:col-start-1 md:col-span-6 mb-10 md:mb-0'>
-                    <h2 className='text-lg lg:text-2xl font-normal mb-2'>Learning Progress</h2>
+                    <div className='flex justify-between items-center'>
+                        <h2 className='text-lg lg:text-2xl font-normal mb-2'>Learning Progress</h2>
+                        <p className='self-center'>
+                            <Button variant="link" className='text-blue-600 text-md lg:text-lg group'>see more 
+                                <MoveRight className="inline-block self-end transition-transform duration-300 group-hover:translate-x-2"/>
+                            </Button>
+                        </p>   
+                    </div>
+                    {/* <h2 className='text-lg lg:text-2xl font-normal mb-2'>Learning Progress</h2> */}
                     <div className="overflow-hidden rounded-2xl bg-white ring-1 ring-primary drop-shadow-[5px_5px_rgba(0,0,0,1)] h-80">
-                        <div className="px-4 py-5 sm:p-6">{/* Content goes here */}</div>
+                    {/* <div> */}
+                        <div>
+                            <Card className="flex flex-col pt-3 pb-8 gap-0 border-none shadow-none">
+                                <CardHeader className="items-center pb-0">
+                                    {/* <CardTitle>Radial Chart - Label</CardTitle> */}
+                                    <CardDescription>January - June 2024</CardDescription>
+                                </CardHeader>
+                                <CardContent className="flex-1 pb-0">
+                                    <ChartContainer
+                                        config={chartConfig}
+                                        className="mx-auto aspect-square max-h-[250px]"
+                                    >
+                                        <RadialBarChart
+                                        data={chartData}
+                                        startAngle={-90}
+                                        endAngle={380}
+                                        innerRadius={20}
+                                        outerRadius={140}
+                                        >
+                                        <ChartTooltip
+                                            cursor={false}
+                                            content={<ChartTooltipContent hideLabel nameKey="browser" />}
+                                        />
+                                        <RadialBar dataKey="visitors" background>
+                                            <LabelList
+                                            position="insideStart"
+                                            dataKey="browser"
+                                            className="fill-white capitalize mix-blend-luminosity"
+                                            fontSize={11}
+                                            />
+                                        </RadialBar>
+                                        </RadialBarChart>
+                                    </ChartContainer>
+                                </CardContent>
+                                {/* <CardFooter className="flex-col gap-2 text-sm">
+                                    <div className="flex items-center gap-2 leading-none font-medium">
+                                        Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+                                    </div>
+                                    <div className="text-muted-foreground leading-none">
+                                        Showing total visitors for the last 6 months
+                                    </div>
+                                </CardFooter> */}
+                            </Card>
+                        </div>
                     </div>
                 </div>
 
                 <div className='col-start-1 col-span-12 md:col-start-7 md:col-span-6 mt-6 md:mt-0 mb-10 md:mb-0'>
                     <div className='flex justify-between items-center'>
                         <h2 className='text-lg lg:text-2xl font-normal'>Your On Going Courses</h2>
-                        <p className='self-center'><Button variant="link" className='text-blue-600 text-md lg:text-lg'>see more </Button></p>   
+                        <p className='self-center'>
+                            <Link href="/listCourse">
+                                <Button variant="link" className='text-blue-600 text-md lg:text-lg group'>see more 
+                                    <MoveRight className="inline-block self-end transition-transform duration-300 group-hover:translate-x-2"/>
+                                </Button>
+                            </Link>
+                        </p>   
                     </div>
                     <div className="overflow-hidden rounded-2xl bg-[#FFDDDD] ring-1 ring-primary drop-shadow-[5px_5px_rgba(0,0,0,1)] h-28 mt-2 mb-4">
                         <div className="px-3 py-3 sm:px-4 sm:py-3">
@@ -103,14 +217,17 @@ export default function Dashboard() {
                                     </div>
                                 </div>
                                 <div className='w-fit justify-self-end self-center'>
-                                    <div className="overflow-hidden rounded-2xl bg-white ring-1 ring-primary h-fit group">
-                                        <div className="p-4">
-                                            {/* Content goes here */}
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="black" className="h-full size-6 sm:size-9 md:size-6 transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                                            </svg>
+                                    <Link href="/course" legacyBehavior passHref>
+                                        <div className="overflow-hidden rounded-2xl bg-white ring-1 ring-primary h-fit group hover:text-blue-700">
+                                            <div className="p-4 pt-3 pb-0">
+                                                {/* Content goes here */}
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="black" className="h-full size-6 sm:size-9 md:size-6 transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                                </svg>
+                                            </div>
+                                            <p className="text-center text-xs p-1">Detail</p>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -133,14 +250,17 @@ export default function Dashboard() {
                                     </div>
                                 </div>
                                 <div className='w-fit justify-self-end self-center'>
-                                    <div className="overflow-hidden rounded-2xl bg-white ring-1 ring-primary h-fit group">
-                                        <div className="p-4">
-                                            {/* Content goes here */}
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="black" className="h-full size-6 sm:size-9 md:size-6 transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                                            </svg>
+                                    <Link href="/course" legacyBehavior passHref>
+                                        <div className="overflow-hidden rounded-2xl bg-white ring-1 ring-primary h-fit group hover:text-blue-700">
+                                            <div className="p-4 pt-3 pb-0">
+                                                {/* Content goes here */}
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="black" className="h-full size-6 sm:size-9 md:size-6 transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-2">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                                </svg>
+                                            </div>
+                                            <p className="text-center text-xs p-1">Detail</p>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </div>
                                 <div className='col-span-5 sm:col-span-7 md:col-span-5 lg:col-span-7 border-t-2 border-black w-full text-center'>
                                     <div className='grid grid-cols-12 gap-4'>
@@ -166,7 +286,11 @@ export default function Dashboard() {
             <div className='col-start-1 col-span-12'>
                 <div className='flex justify-between items-center mb-2'>
                     <h2 className='text-lg lg:text-2xl font-normal'>Transaction</h2>
-                    <p className='self-center'><Button variant="link" className='text-blue-600 text-md lg:text-lg'>see more </Button></p>   
+                    <p className='self-center'>
+                        <Button variant="link" className='text-blue-600 text-md lg:text-lg group'>see more 
+                            <MoveRight className="inline-block self-end transition-transform duration-300 group-hover:translate-x-2"/>
+                        </Button>
+                    </p>   
                 </div>
                 {/* <div className="overflow-x-auto overflow-y-auto rounded-2xl bg-white ring-1 ring-primary drop-shadow-[5px_5px_rgba(0,0,0,1)] h-80"> */}
                 <div className="rounded-2xl ring-1 ring-primary bg-white drop-shadow-[5px_5px_rgba(0,0,0,1)]">
