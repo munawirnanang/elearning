@@ -32,6 +32,9 @@ export default function Course() {
                     <div className='grid grid-cols-12 md:gap-10'>
                     
                     <div className='col-start-1 col-span-12 md:col-start-1 md:col-span-8'>
+                        <div className="w-fit rounded-2xl bg-outline ring-1 ring-primary ml-0 mt-5 mb-2 px-2 py-1 text-center text-sm font-medium text-primary">
+                            UMKM Level Up
+                        </div>
                         <h3 className='text-xl font-bold mt-4 text-[#e5e5e5]'>Digital Marketing untuk pemula</h3>
                         <h3 className='text-lg font-normal mt-4 text-[#e5e5e5]'>About</h3>
                         <p className='text-sm font-thin text-[#e5e5e5]'>
@@ -205,12 +208,16 @@ export default function Course() {
                         <div className="hidden sm:block overflow-hidden rounded-2xl bg-yellow-100 ring-1 ring-black drop-shadow-[5px_5px_rgba(0,0,0,1)] h-96">
                             <div className="px-4 py-5 sm:p-6">{/* Content goes here */}</div>
                         </div>
-                        <h3 className='text-xl font-bold mt-4 text-[#e5e5e5]'>Digital Marketing untuk pemula</h3>
+                        <div className="w-fit rounded-2xl bg-outline ring-1 ring-primary ml-0 mt-5 mb-2 px-2 py-1 text-center text-sm font-medium text-primary">
+                            UMKM Level Up
+                        </div>
+                        <h3 className='text-xl font-bold mt-4 text-[#e5e5e5]'>Budidaya lele omset 10 juta</h3>
                         <h3 className='text-lg font-normal mt-4 text-[#e5e5e5]'>About</h3>
                         <p className='text-sm font-thin text-[#e5e5e5]'>
-                        Kebutuhan komoditas  budi daya mengalami peningkatan, termasuk ikan lele. 
-                        Dengan pengalaman 10 tahun pada budidaya ini, 
-                        kami akan ajarkan step by step untuk membudi daya ikan lele </p>
+                            Kebutuhan komoditas  budi daya mengalami peningkatan, termasuk ikan lele. 
+                            Dengan pengalaman 10 tahun pada budidaya ini, 
+                            kami akan ajarkan step by step untuk membudi daya ikan lele 
+                        </p>
                         <h3 className='text-lg font-normal mt-4 text-[#e5e5e5]'>Required</h3>
                         <div className="pt-4 pb-8">
                             <div className="mx-auto max-w-7xl px-6 lg:px-8">

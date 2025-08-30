@@ -186,19 +186,116 @@ function classNames(...classes: (string | undefined | null | false)[]): string {
 export default function DetailProduct() {
   return (
     <div className="mt-28 mb-10">
-      <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 py-8 sm:py-8 lg:max-w-6xl">
-        <p className="text-2xl lg:text-4xl  font-semibold tracking-tight text-primary pb-6">Detail Course</p>
+
+      <div className="fixed sm:hidden aspect-h-3 aspect-w-4 overflow-hidden bg-yellow-100 z-10">
+        <img alt={product.imageAlt} src={product.imageSrc} className="object-cover object-center" />
+      </div>
+      
+      <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 pt-64 sm:py-8 lg:max-w-6xl">
+        {/* <p className="text-2xl lg:text-4xl  font-semibold tracking-tight text-primary pb-6">Detail Course</p> */}
         {/* Product */}
         <div className="lg:grid lg:grid-cols-7 lg:grid-rows-1 lg:gap-x-8 lg:gap-y-10 xl:gap-x-16">
+
+
           {/* Product image */}
           <div className="lg:col-span-4 lg:row-end-1">
-            <div className="aspect-h-3 aspect-w-4 overflow-hidden rounded-2xl bg-gray-100">
+
+
+            <div className="hidden sm:flex items-start">
+              <h3 className="text-sm font-medium text-primary mr-5">Share</h3>
+              <ul role="list" className="mb-4 flex items-start space-x-6">
+                <li>
+                  <a href="#" className="flex h-6 w-6 items-center justify-center text-gray-400 dark:text-gray-300 hover:text-gray-500">
+                    <span className="sr-only">Share on Facebook</span>
+                    <svg fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" className="h-5 w-5">
+                      <path
+                        d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"
+                        clipRule="evenodd"
+                        fillRule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="flex h-6 w-6 items-center justify-center text-gray-400 dark:text-gray-300 hover:text-gray-500">
+                    <span className="sr-only">Share on Instagram</span>
+                    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6">
+                      <path
+                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                        clipRule="evenodd"
+                        fillRule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="flex h-6 w-6 items-center justify-center text-gray-400 dark:text-gray-300 hover:text-gray-500">
+                    <span className="sr-only">Share on X</span>
+                    <svg fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" className="h-5 w-5">
+                      <path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+
+            <div className="hidden sm:block aspect-h-3 aspect-w-4 overflow-hidden rounded-2xl bg-gray-100">
               <img alt={product.imageAlt} src={product.imageSrc} className="object-cover object-center" />
+            </div>
+            <div className="hidden sm:flex items-center justify-between pt-2">
+                <button className="w-full p-1 mr-2 rounded-2xl border-1 border-dashed border-black dark:border-white font-medium  hover:bg-primary/80">
+                    Previous Video
+                </button>
+                <button className="w-full p-1 ml-2 rounded-2xl font-medium bg-black dark:bg-white text-white dark:text-black hover:bg-primary/80">
+                    Next Video
+                </button>
+            </div>
+          </div>
+
+          <div className="flex sm:hidden items-center mt-2">
+            <div className="inline-flex border-1 border-black dark:border-white p-1 px-4 rounded-2xl">
+              <h3 className="text-sm font-medium text-primary mr-5">Share</h3>
+              <ul role="list" className="flex items-center space-x-3">
+                <li>
+                  <a href="#" className="flex h-6 w-6 items-center justify-center text-gray-400 dark:text-gray-300 hover:text-gray-500">
+                    <span className="sr-only">Share on Facebook</span>
+                    <svg fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" className="h-4 w-4">
+                      <path
+                        d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"
+                        clipRule="evenodd"
+                        fillRule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="flex h-6 w-6 items-center justify-center text-gray-400 dark:text-gray-300 hover:text-gray-500">
+                    <span className="sr-only">Share on Instagram</span>
+                    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4">
+                      <path
+                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                        clipRule="evenodd"
+                        fillRule="evenodd"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="flex h-6 w-6 items-center justify-center text-gray-400 dark:text-gray-300 hover:text-gray-500">
+                    <span className="sr-only">Share on X</span>
+                    <svg fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" className="h-4 w-4">
+                      <path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
 
           {/* Product details */}
-          <div className="mx-auto mt-14 max-w-2xl sm:mt-16 lg:col-span-3 lg:row-span-2 lg:row-end-2 lg:mt-0 lg:max-w-none">
+          <div className="mx-auto mt-6 max-w-2xl sm:mt-16 lg:col-span-3 lg:row-span-2 lg:row-end-2 lg:mt-0 lg:max-w-none">
             <div className="flex flex-col-reverse">
               <div className="mt-4">
                 <h1 className="text-2xl font-bold tracking-tight text-primary sm:text-3xl">{product.name}</h1>
@@ -213,10 +310,10 @@ export default function DetailProduct() {
               </div>
             </div>
 
-            <p className="mt-6 text-gray-500">{product.description}</p>
+            <p className="mt-6 text-gray-500 dark:text-gray-300">{product.description}</p>
 
-            <div className="mt-10 border-t border-gray-200 pt-10">
-              <div className="prose prose-sm mt-4 text-gray-500">
+            <div className="mt-10 border-t border-gray-300 dark:border-gray-500 pt-10">
+              <div className="prose prose-sm text-gray-500">
                 <dl className="col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-10 text-base leading-7 text-gray-600 lg:gap-y-16">
                     {features.map((feature) => (
                     <div key={feature.name} className="relative pl-9">
@@ -230,7 +327,7 @@ export default function DetailProduct() {
               </div>
             </div>
 
-            <div className="mt-10 border-t border-gray-200 pt-10">
+            <div className="mt-10 border-t border-gray-300 dark:border-gray-500 pt-10">
               <h3 className="text-3xl font-medium text-primary mb-8">Silabus</h3>
               <div className="flow-root">
                 <ul role="list" className="-mb-8">
@@ -245,7 +342,7 @@ export default function DetailProduct() {
                             <span
                                 className={classNames(
                                 event.iconBackground,
-                                'flex h-8 w-8 items-center justify-center rounded-full ring-8 ring-white',
+                                'flex h-8 w-8 items-center justify-center rounded-full ring-1 ring-white',
                                 )}
                             >
                                 <event.icon aria-hidden="true" className="h-5 w-5 text-white" />
@@ -253,11 +350,11 @@ export default function DetailProduct() {
                             </div>
                             <div className="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
                             <div>
-                                <p className="text-sm text-gray-500">
+                                <p className="text-sm text-gray-500 dark:text-gray-300">
                                 {event.content}{' '}
                                 </p>
                             </div>
-                            <div className="whitespace-nowrap text-right text-sm text-gray-500">
+                            <div className="whitespace-nowrap text-right text-sm text-gray-500 dark:text-gray-300">
                                 <time dateTime={event.datetime}>{event.date}</time>
                             </div>
                             </div>
@@ -268,50 +365,13 @@ export default function DetailProduct() {
                 </ul>
               </div>
             </div>
-
-            <div className="mt-10 border-t border-gray-200 pt-10">
-              <h3 className="text-sm font-medium text-primary">Share</h3>
-              <ul role="list" className="mt-4 flex items-center space-x-6">
-                <li>
-                  <a href="#" className="flex h-6 w-6 items-center justify-center text-gray-400 hover:text-gray-500">
-                    <span className="sr-only">Share on Facebook</span>
-                    <svg fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" className="h-5 w-5">
-                      <path
-                        d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"
-                        clipRule="evenodd"
-                        fillRule="evenodd"
-                      />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="flex h-6 w-6 items-center justify-center text-gray-400 hover:text-gray-500">
-                    <span className="sr-only">Share on Instagram</span>
-                    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" className="h-6 w-6">
-                      <path
-                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                        clipRule="evenodd"
-                        fillRule="evenodd"
-                      />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="flex h-6 w-6 items-center justify-center text-gray-400 hover:text-gray-500">
-                    <span className="sr-only">Share on X</span>
-                    <svg fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" className="h-5 w-5">
-                      <path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z" />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
+          
           </div>
 
           <div className="mx-auto mt-16 w-full max-w-2xl lg:col-span-4 lg:mt-0 lg:max-w-none">
             
 
-            <div className="hidden md:block sticky bottom-0 flex-none ring-1 ring-primary rounded-2xl p-8">
+            <div className="hidden md:block sticky bottom-0 flex-none border-1 border-black rounded-2xl p-8">
                 <form>
                     <label htmlFor="metode-code" className="block text-xl font-semibold text-primary">
                         Pilih Metode Pembayaran
@@ -358,7 +418,7 @@ export default function DetailProduct() {
                             id="discount-code"
                             name="discount-code"
                             type="text"
-                            className="block w-full rounded-2xl ring-1 ring-primary shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-md py-2 px-6"
+                            className="block w-full rounded-2xl border-1 border-black shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-md py-2 px-6"
                         />
                         <Button
                             type="submit"
@@ -405,6 +465,7 @@ export default function DetailProduct() {
                     <Button variant="destructive" className="rounded-full ring-1 ring-black text-white hover:text-black">Gabung Kelas</Button>
                 </div>
             </div>
+            
             <div className="fixed bottom-0 left-0 right-0 z-50 bg-red-700 shadow-sm">
                 <div className="block md:hidden">
                     <div className="flex items-center justify-between p-4">
