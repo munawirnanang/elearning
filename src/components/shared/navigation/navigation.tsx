@@ -6,7 +6,6 @@ import { NavigationMenuDemo } from "@/components/shared/navigation/navigation-me
 import { NavigationMenuDemo2 } from "@/components/shared/navigation/navigation-menu-2"
 import { Button } from "@/components/ui/button"
 import { MoveRight, UserCircle } from "lucide-react"
-import { useTheme } from "next-themes"
 import { CommandDialogDemo } from "@/components/shared/search/search"
 // import { Separator } from "@/components/ui/separator"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
@@ -48,7 +47,6 @@ import {
 } from "@/components/ui/card"
 
 export default function Navigation() {
-  const { theme, setTheme } = useTheme()
   const isMobile = useIsMobile()
 
   return (
