@@ -1,7 +1,12 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
+import { Toggle } from "@/components/ui/toggle"
+import { Sun, Moon, MoveRight } from "lucide-react"
+import { useTheme } from "next-themes"
 
 import {
   Drawer,
@@ -184,6 +189,12 @@ function classNames(...classes: (string | undefined | null | false)[]): string {
 // }
 
 export default function DetailProduct() {
+  const { theme, setTheme } = useTheme()
+  
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light")
+  }
+
   return (
     <div className="mt-28 mb-10">
 
@@ -305,9 +316,27 @@ export default function DetailProduct() {
                 </h2>
               </div>
 
-              <div className="w-fit rounded-2xl bg-outline ring-1 ring-primary ml-0 mb-2 px-2 py-1 text-center text-sm font-medium text-primary">
-                {product.category}
+              <div className="flex items-center justify-between">
+                <div className="w-fit rounded-2xl bg-outline border-1 border-primary ml-0 mb-2 px-2 py-1 text-center text-sm font-medium text-primary">
+                  {product.category}
+                </div>
+
+                <Toggle aria-label="Toggle theme" onClick={toggleTheme}>
+                    {theme === "light" ? (
+                      <p className="flex items-center bg-black text-white p-1 px-4 rounded-2xl">
+                        Dark Mode
+                        <Moon className="ml-2 h-2 w-2" />
+                      </p>
+                    ) : (
+                      <p className="flex items-center bg-white text-black p-1 px-4 rounded-2xl">
+                        Light Mode
+                        <Sun className="ml-2 h-2 w-2" />
+                      </p>
+                    )}
+                  </Toggle>
+
               </div>
+
             </div>
 
             <p className="mt-6 text-gray-500 dark:text-gray-300">{product.description}</p>

@@ -6,7 +6,7 @@ import { NavigationMenuDemo } from "@/components/shared/navigation/navigation-me
 import { NavigationMenuDemo2 } from "@/components/shared/navigation/navigation-menu-2"
 import { Toggle } from "@/components/ui/toggle"
 import { Button } from "@/components/ui/button"
-import { Sun, Moon, MoveRight } from "lucide-react"
+import { MoveRight, LogIn, UserCircle } from "lucide-react"
 import { useTheme } from "next-themes"
 import { CommandDialogDemo } from "@/components/shared/search/search"
 // import { Separator } from "@/components/ui/separator"
@@ -68,13 +68,9 @@ export default function Navigation() {
                 <div className="flex-grow mx-2">
                   <CommandDialogDemo />
                 </div>
-                <Toggle aria-label="Toggle theme" onClick={toggleTheme}>
-                  {theme === "light" ? (
-                    <Moon className="h-4 w-4" />
-                  ) : (
-                    <Sun className="h-4 w-4" />
-                  )}
-                </Toggle>
+                <div className="content-center">
+                  <UserCircle className="h-6 w-6 text-primary" />
+                </div>
               </SidebarProvider>
             </div>
             <div className="bg-[rgb(25,36,65)] dark:bg-transparent dark:border-b dark:border-primary">
@@ -260,13 +256,9 @@ export default function Navigation() {
                     </Tabs>
                   </DialogContent>
                 </Dialog>
-                <Toggle aria-label="Toggle theme" onClick={toggleTheme}>
-                  {theme === "light" ? (
-                    <Moon className="h-4 w-4" />
-                  ) : (
-                    <Sun className="h-4 w-4" />
-                  )}
-                </Toggle>
+                <div className="content-center">
+                  <UserCircle className="h-6 w-6 text-primary" />
+                </div>
               </div>
             </div>
             <div className="bg-[rgb(25,36,65)] dark:bg-transparent dark:border-b dark:border-primary">
