@@ -12,7 +12,7 @@ export function ThemeProvider({
   const pathname = usePathname();
 
   // kalau di /course, paksa dark mode
-  const isCoursePage = pathname.startsWith("/course");
+  const isCoursePage = pathname.startsWith("/detailProduct");
 
-  return (<NextThemesProvider {...props} attribute="class" defaultTheme="system" enableSystem forcedTheme={isCoursePage ? "dark" : undefined}>{children}</NextThemesProvider>);
+  return (<NextThemesProvider {...props} attribute="class" defaultTheme="system" enableSystem forcedTheme={isCoursePage ? undefined : "light"}>{children}</NextThemesProvider>);
 }

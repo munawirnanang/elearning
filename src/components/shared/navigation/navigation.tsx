@@ -45,6 +45,14 @@ import {
   // CardHeader,
   // CardTitle,
 } from "@/components/ui/card"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export default function Navigation() {
   const isMobile = useIsMobile()
@@ -62,7 +70,19 @@ export default function Navigation() {
                   <CommandDialogDemo />
                 </div>
                 <div className="content-center">
-                  <UserCircle className="h-6 w-6 text-primary" />
+                  <DropdownMenu>
+                    <DropdownMenuTrigger>
+                      <UserCircle className="h-6 w-6 text-primary" />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="mx-2">
+                      <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuItem>Profile</DropdownMenuItem>
+                      <DropdownMenuItem>Billing</DropdownMenuItem>
+                      <DropdownMenuItem>Team</DropdownMenuItem>
+                      <DropdownMenuItem>Subscription</DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 </div>
               </SidebarProvider>
             </div>
@@ -250,7 +270,19 @@ export default function Navigation() {
                   </DialogContent>
                 </Dialog>
                 <div className="content-center">
-                  <UserCircle className="h-6 w-6 text-primary" />
+                  <DropdownMenu>
+                    <DropdownMenuTrigger>
+                      <UserCircle className="h-6 w-6 text-primary" />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="mx-2">
+                      <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                      <DropdownMenuSeparator />
+                      <DropdownMenuItem>Profile</DropdownMenuItem>
+                      <DropdownMenuItem>Billing</DropdownMenuItem>
+                      <DropdownMenuItem>Team</DropdownMenuItem>
+                      <DropdownMenuItem>Subscription</DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 </div>
               </div>
             </div>
