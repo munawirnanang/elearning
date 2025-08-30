@@ -51,10 +51,6 @@ export default function Navigation() {
   const { theme, setTheme } = useTheme()
   const isMobile = useIsMobile()
 
-  const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light")
-  }
-
   return (
     <>
       <div className="fixed top-0 left-0 right-0 z-50 bg-background shadow-sm">
