@@ -1,11 +1,16 @@
 "use client"
 
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Skeleton } from "@/components/ui/skeleton"
 import Link from "next/link"
 
 export default function Hero() {
+    const [loadedMain, setLoadedMain] = useState(false)
+    const [loadedLeft, setLoadedLeft] = useState(false)
+    const [loadedRight, setLoadedRight] = useState(false)
+
     return (
         <div className="mt-28">
             <main>
@@ -99,31 +104,52 @@ export default function Hero() {
                             </div>
                             <div className="flex justify-end gap-8 sm:-mt-44 sm:justify-start lg:mt-0 lg:pl-0 lg:mr-10 order-first lg:order-last">
                                 <div className="relative">
-                                    {/* <Skeleton className="aspect-[3/2] w-full rounded-3xl mb-5" /> */}
+                                    {/* Gambar utama */}
+                                    {!loadedMain && (
+                                    <Skeleton className="aspect-[3/2] h-80 rounded-3xl mb-5 animate-shimmer" />
+                                    )}
+                                    <img
+                                    loading="lazy"
+                                    alt=""
+                                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&h=528&q=80"
+                                    className={`aspect-[3/2] w-full rounded-3xl bg-gray-900/5 object-cover shadow-lg ring-1 ring-primary mb-5 transition-opacity duration-500 ${
+                                        loadedMain ? "opacity-100" : "opacity-0 absolute top-0 left-0"
+                                    }`}
+                                    onLoad={() => setLoadedMain(true)}
+                                    />
+
+                                    {/* Gambar tambahan (hanya di lg) */}
+                                    <div className="hidden lg:flex">
+                                    {/* Left */}
+                                    {!loadedLeft && (
+                                        <Skeleton className="aspect-auto h-72 w-[48.5%] rounded-3xl mr-2 animate-pulse" />
+                                    )}
                                     <img
                                         loading="lazy"
                                         alt=""
-                                        src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                                        className="aspect-[3/2] w-full rounded-3xl bg-gray-900/5 object-cover shadow-lg ring-1 ring-primary mb-5"
+                                        src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&h=528&q=80"
+                                        className={`aspect-auto h-72 w-[48.5%] rounded-3xl bg-gray-900/5 object-cover shadow-lg ring-1 ring-primary mr-2 transition-opacity duration-500 ${
+                                        loadedLeft ? "opacity-100" : "opacity-0 absolute"
+                                        }`}
+                                        onLoad={() => setLoadedLeft(true)}
                                     />
-                                    <div className="hidden lg:flex">
-                                        {/* <Skeleton className="aspect-auto h-72 w-[48.5%] rounded-3xl mr-2" /> */}
-                                        <img
-                                            loading="lazy"
-                                            alt=""
-                                            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                                            className="aspect-auto h-72 w-[48.5%] rounded-3xl bg-gray-900/5 object-cover shadow-lg ring-1 ring-primary mr-2"
-                                        />
-                                        <Skeleton className="aspect-auto h-72 w-[48.5%] rounded-3xl ml-2 animate-shimmer" />
-                                        {/* <img
-                                            loading="lazy"
-                                            alt=""
-                                            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
-                                            className="aspect-auto h-72 w-[48.5%] rounded-3xl bg-gray-900/5 object-cover shadow-lg ring-1 ring-black ml-2"
-                                        /> */}
+
+                                    {/* Right */}
+                                    {!loadedRight && (
+                                        <Skeleton className="aspect-auto h-72 w-[48.5%] rounded-3xl ml-2 animate-pulse" />
+                                    )}
+                                    <img
+                                        loading="lazy"
+                                        alt=""
+                                        src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&h=528&q=80"
+                                        className={`aspect-auto h-72 w-[48.5%] rounded-3xl bg-gray-900/5 object-cover shadow-lg ring-1 ring-primary ml-2 transition-opacity duration-500 ${
+                                        loadedRight ? "opacity-100" : "opacity-0 absolute"
+                                        }`}
+                                        onLoad={() => setLoadedRight(true)}
+                                    />
                                     </div>
                                 </div>
-                            </div>
+                                </div>
                         </div>
                     </div>
                 </div>

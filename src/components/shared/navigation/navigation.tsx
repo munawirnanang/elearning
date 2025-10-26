@@ -14,6 +14,13 @@ import { useIsMobile } from "@/hooks/use-mobile"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+import {
   Dialog,
   DialogContent,
   // DialogDescription,
@@ -69,7 +76,7 @@ export default function Navigation() {
                 <div className="flex-grow mx-2">
                   <CommandDialogDemo />
                 </div>
-                <div className="content-center">
+                <div className="content-end">
                   <DropdownMenu>
                     <DropdownMenuTrigger>
                       <UserCircle className="h-6 w-6 text-primary" />
@@ -107,7 +114,7 @@ export default function Navigation() {
               <NavigationMenuDemo />
 
               <div className="flex items-center gap-2">
-                <Dialog>
+                {/* <Dialog>
                   <DialogTrigger asChild>
                     <Button variant="link" className="group">Log in<MoveRight className="inline-block transition-transform duration-300 group-hover:translate-x-2"/></Button>
                   </DialogTrigger>
@@ -119,12 +126,6 @@ export default function Navigation() {
                       </TabsList>
                       <TabsContent value="login">
                         <Card className="border-0 shadow-none bg-transparent">
-                          {/* <CardHeader>
-                            <CardTitle>Login</CardTitle>
-                            <CardDescription>
-                              Enter your email and password below to login to your account
-                            </CardDescription>
-                          </CardHeader> */}
                           <CardContent className="space-y-2 px-0">
                             <div className="space-y-1">
                               <Label htmlFor="email">Email</Label>
@@ -149,12 +150,6 @@ export default function Navigation() {
                       </TabsContent>
                       <TabsContent value="signup">
                         <Card className="border-0 shadow-none bg-transparent">
-                          {/* <CardHeader>
-                            <CardTitle>Signup</CardTitle>
-                            <CardDescription>
-                              Craate account to signup
-                            </CardDescription>
-                          </CardHeader> */}
                           <CardContent className="space-y-2 px-0">
                             <div className="space-y-1">
                               <Label htmlFor="signUpFullname">Fullname</Label>
@@ -187,8 +182,8 @@ export default function Navigation() {
                       </TabsContent>
                     </Tabs>
                   </DialogContent>
-                </Dialog>
-                <Dialog>
+                </Dialog> */}
+                {/* <Dialog>
                   <DialogTrigger asChild>
                     <Button className="ring-1 ring-black rounded-full">Sign Up</Button>
                   </DialogTrigger>
@@ -200,12 +195,6 @@ export default function Navigation() {
                       </TabsList>
                       <TabsContent value="login">
                         <Card className="border-0 shadow-none bg-transparent">
-                          {/* <CardHeader>
-                            <CardTitle>Login</CardTitle>
-                            <CardDescription>
-                              Enter your email and password below to login to your account
-                            </CardDescription>
-                          </CardHeader> */}
                           <CardContent className="space-y-2 px-0">
                             <div className="space-y-1">
                               <Label htmlFor="email">Email</Label>
@@ -230,12 +219,6 @@ export default function Navigation() {
                       </TabsContent>
                       <TabsContent value="signup">
                         <Card className="border-0 shadow-none bg-transparent">
-                          {/* <CardHeader>
-                            <CardTitle>Signup</CardTitle>
-                            <CardDescription>
-                              Craate account to signup
-                            </CardDescription>
-                          </CardHeader> */}
                           <CardContent className="space-y-2 px-0">
                             <div className="space-y-1">
                               <Label htmlFor="signUpFullname">Username</Label>
@@ -268,11 +251,24 @@ export default function Navigation() {
                       </TabsContent>
                     </Tabs>
                   </DialogContent>
-                </Dialog>
-                <div className="content-center">
+                </Dialog> */}
+                <div className="inline-flex items-center">
+                  <Select defaultValue="k1">
+                    <SelectTrigger className="text-sm px-3 text-white hover:text-black dark:text-black dark:hover:text-white bg-black hover:bg-white dark:bg-white dark:hover:bg-black border-1 border-primary dark:border-white rounded-full">
+                      <SelectValue placeholder="Pilih peran" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="k1">Warganet</SelectItem>
+                      <SelectItem value="k2">Creator</SelectItem>
+                      <SelectItem value="k3">Hokage</SelectItem>
+                      <SelectItem value="k4">Pemerintah Dunia</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="content-end">
                   <DropdownMenu>
                     <DropdownMenuTrigger>
-                      <UserCircle className="h-6 w-6 text-primary" />
+                      <UserCircle className="h-7 w-7 text-primary" />
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="mx-2">
                       <DropdownMenuLabel>My Account</DropdownMenuLabel>
