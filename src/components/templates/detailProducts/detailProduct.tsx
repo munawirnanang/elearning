@@ -285,15 +285,15 @@ export default function DetailProduct() {
                   </DropdownMenuContent>
                 </DropdownMenu>
               </div> */}
-              <div className="hidden sm:flex items-center justify-end mt-1 gap-5">
-                  <button variant="link" className="inline-flex items-end hover:underline group">
+              <div className="hidden sm:flex items-center justify-end">
+                  <Button variant="link" className="inline-flex items-end hover:underline group">
                       <ChevronLeftIcon className="h-5 w-5 group-hover:-translate-x-1" />
                       Previous
-                  </button>
-                  <button variant="link" className="inline-flex items-end hover:underline group">
+                  </Button>
+                  <Button variant="link" className="inline-flex items-end hover:underline group">
                       Next
                       <ChevronRightIcon className="h-5 w-5 group-hover:translate-x-1" />
-                  </button>
+                  </Button>
               </div>
             </div>
           </div>
