@@ -5,7 +5,10 @@ import * as React from "react"
 import { NavigationMenuDemo } from "@/components/shared/navigation/navigation-menu"
 import { NavigationMenuDemo2 } from "@/components/shared/navigation/navigation-menu-2"
 // import { Button } from "@/components/ui/button"
-// import { MoveRight, UserCircle } from "lucide-react"
+import { 
+  // MoveRight, 
+  UserCircle 
+} from "lucide-react"
 import { CommandDialogDemo } from "@/components/shared/search/search"
 // import { Separator } from "@/components/ui/separator"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
