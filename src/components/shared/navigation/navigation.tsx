@@ -4,15 +4,15 @@ import * as React from "react"
 // import { MenubarDemo } from "@/components/shared/homepage-navigation-menubar"
 import { NavigationMenuDemo } from "@/components/shared/navigation/navigation-menu"
 import { NavigationMenuDemo2 } from "@/components/shared/navigation/navigation-menu-2"
-import { Button } from "@/components/ui/button"
-import { MoveRight, UserCircle } from "lucide-react"
+// import { Button } from "@/components/ui/button"
+// import { MoveRight, UserCircle } from "lucide-react"
 import { CommandDialogDemo } from "@/components/shared/search/search"
 // import { Separator } from "@/components/ui/separator"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/shared/navigation/navigation-menu-sidebar"
 import { useIsMobile } from "@/hooks/use-mobile"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+// import { Input } from "@/components/ui/input"
+// import { Label } from "@/components/ui/label"
 import {
   Select,
   SelectContent,
@@ -21,13 +21,13 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import {
-  Dialog,
-  DialogContent,
+  // Dialog,
+  // DialogContent,
   // DialogDescription,
   // DialogFooter,
   // DialogHeader,
   // DialogTitle,
-  DialogTrigger,
+  // DialogTrigger,
 } from "@/components/ui/dialog"
 // import {
 //   Menubar,
@@ -39,16 +39,16 @@ import {
 //   MenubarTrigger,
 // } from "@/components/ui/menubar"
 import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
+  // Tabs,
+  // TabsContent,
+  // TabsList,
+  // TabsTrigger,
 } from "@/components/ui/tabs"
 import {
-  Card,
-  CardContent,
+  // Card,
+  // CardContent,
   // CardDescription,
-  CardFooter,
+  // CardFooter,
   // CardHeader,
   // CardTitle,
 } from "@/components/ui/card"
