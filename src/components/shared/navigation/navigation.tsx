@@ -3,7 +3,6 @@
 import * as React from "react"
 // import { MenubarDemo } from "@/components/shared/homepage-navigation-menubar"
 import { NavigationMenuDemo } from "@/components/shared/navigation/navigation-menu"
-import { NavigationMenuDemo2 } from "@/components/shared/navigation/navigation-menu-2"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import {
@@ -19,13 +18,13 @@ import { AppSidebar } from "@/components/shared/navigation/navigation-menu-sideb
 import { useIsMobile } from "@/hooks/use-mobile"
 // import { Input } from "@/components/ui/input"
 // import { Label } from "@/components/ui/label"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
+// import {
+//   Select,
+//   SelectContent,
+//   SelectItem,
+//   SelectTrigger,
+//   SelectValue,
+// } from "@/components/ui/select"
 import {
   // Dialog,
   // DialogContent,

@@ -6,10 +6,8 @@ import { AppSidebar } from "@/components/app-sidebar"
 import {
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
-  BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { Separator } from "@/components/ui/separator"
 import {
@@ -27,11 +25,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 import { Button } from "@/components/ui/button"
-import {
-  ButtonGroup,
-  ButtonGroupSeparator,
-  ButtonGroupText,
-} from "@/components/ui/button-group"
+import { ButtonGroup } from "@/components/ui/button-group"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import {
@@ -61,7 +55,6 @@ import {
 
 import {
   // MoveRight,
-  GalleryVerticalEnd,
   UserCircle,
   ChefHat,
   Wheat,
@@ -280,10 +273,6 @@ export default function Cashier() {
     setVoucherCode("")
     setMemberCode("")
     setPaymentMethod("qr")
-  }
-
-  const handlePay = () => {
-    setCheckoutStep("processing")
   }
 
   const cancelProcessing = () => {
@@ -849,8 +838,6 @@ export default function Cashier() {
                   </p>
                 ) : (
                   filteredMenuItems.map((item) => {
-                    const Icon = item.icon
-
                     return (
                       <div key={item.id} className="relative">
                         <button
