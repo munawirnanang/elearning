@@ -91,7 +91,7 @@ export default function Hero() {
                                                 </Link>
                                             </div>
                                             <div className="ml-3 mb-3 inline-flex">
-                                                <Link href="/product">
+                                                <Link href="/cashier">
                                                     <Button variant="alternative_2" className="ring-1 ring-black rounded-full">
                                                         <Megaphone className="mr-1.5 h-4 w-4" />
                                                         Restoran
