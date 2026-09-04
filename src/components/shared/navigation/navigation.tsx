@@ -4,10 +4,13 @@ import * as React from "react"
 // import { MenubarDemo } from "@/components/shared/homepage-navigation-menubar"
 import { NavigationMenuDemo } from "@/components/shared/navigation/navigation-menu"
 import { NavigationMenuDemo2 } from "@/components/shared/navigation/navigation-menu-2"
-// import { Button } from "@/components/ui/button"
-import { 
-  // MoveRight, 
-  UserCircle 
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import {
+  // MoveRight,
+  // ArrowRight,
+  LogIn,
+  UserCircle
 } from "lucide-react"
 import { CommandDialogDemo } from "@/components/shared/search/search"
 // import { Separator } from "@/components/ui/separator"
@@ -96,7 +99,7 @@ export default function Navigation() {
                 </div>
               </SidebarProvider>
             </div>
-            <div className="bg-[rgb(25,36,65)] dark:bg-transparent dark:border-b dark:border-primary">
+            {/* <div className="bg-[rgb(25,36,65)] dark:bg-transparent dark:border-b dark:border-primary">
               <div className="flex justify-between overflow-x-auto flex-nowrap whitespace-nowrap">
                 <NavigationMenuDemo2 />
                 <div className="hidden md:block self-center">
@@ -107,12 +110,12 @@ export default function Navigation() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* <Separator /> */}
           </div>
         ) : (
           <div>
-            <div className="flex items-center justify-between p-4">
+            <div className="flex items-center justify-between p-4 border-b border-bg-[rgb(25,36,65)]">
               <CommandDialogDemo />
               <NavigationMenuDemo />
 
@@ -255,7 +258,7 @@ export default function Navigation() {
                     </Tabs>
                   </DialogContent>
                 </Dialog> */}
-                <div className="inline-flex items-center">
+                {/* <div className="inline-flex items-center">
                   <Select defaultValue="k1">
                     <SelectTrigger className="text-sm px-3 text-white hover:text-black dark:text-black dark:hover:text-white bg-black hover:bg-white dark:bg-white dark:hover:bg-black border-1 border-primary dark:border-white rounded-full">
                       <SelectValue placeholder="Pilih peran" />
@@ -267,9 +270,9 @@ export default function Navigation() {
                       <SelectItem value="k4">Pemerintah Dunia</SelectItem>
                     </SelectContent>
                   </Select>
-                </div>
+                </div> */}
                 <div className="content-end">
-                  <DropdownMenu>
+                  {/* <DropdownMenu>
                     <DropdownMenuTrigger>
                       <UserCircle className="h-7 w-7 text-primary" />
                     </DropdownMenuTrigger>
@@ -281,11 +284,17 @@ export default function Navigation() {
                       <DropdownMenuItem>Team</DropdownMenuItem>
                       <DropdownMenuItem>Subscription</DropdownMenuItem>
                     </DropdownMenuContent>
-                  </DropdownMenu>
+                  </DropdownMenu> */}
+                  <Link href="/login">
+                      <Button className="ring-1 ring-black rounded-full group">
+                              Login / Sign Up
+                              <LogIn className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      </Button>
+                  </Link>
                 </div>
               </div>
             </div>
-            <div className="bg-[rgb(25,36,65)] dark:bg-transparent dark:border-b dark:border-primary">
+            {/* <div className="bg-[rgb(25,36,65)] dark:bg-transparent dark:border-b dark:border-primary">
               <div className="flex justify-between">
                 <NavigationMenuDemo2 />
                 <div className="overflow-hidden whitespace-nowrap self-center w-1/3">
@@ -294,7 +303,7 @@ export default function Navigation() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         )}
       </div>

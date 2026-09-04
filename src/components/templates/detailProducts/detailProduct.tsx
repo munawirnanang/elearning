@@ -19,6 +19,13 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer"
 
+import Image from "next/image";
+
+import BniLogo from "@/assets/images/bni_logo.png";
+import MandiriLogo from "@/assets/images/mandiri_logo.png";
+import DanaLogo from "@/assets/images/dana_logo.png";
+import QrisLogo from "@/assets/images/qris_logo.png";
+
 import { CheckIcon, HandThumbUpIcon, UserIcon, ShareIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
 
 import {
@@ -30,11 +37,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
-const subtotal = '$210.00'
-const discount = { code: 'CHEAPSKATE', amount: '$24.00' }
-const taxes = '$23.68'
+const subtotal = 'Rp 200.000'
+const discount = { code: 'CHEAPSKATE', amount: 'Rp 20.000' }
+const taxes = 'Rp 20.000'
 // const shipping = '$22.00'
-const total = '$341.68'
+const total = 'Rp 200.000'
 
 const product = {
   name: 'Budidaya lele omset 10 juta',
@@ -515,30 +522,30 @@ export default function DetailProduct() {
                     <div className="pt-4 pb-8">
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
                             <div className="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-                            <img
-                                alt="Reform"
-                                src="https://images.unsplash.com/photo-1612222869049-d8ec83637a3c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            <Image
+                                alt="BNI"
+                                src={BniLogo}
                                 width={158}
                                 height={48}
                                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                             />
-                            <img
-                                alt="Tuple"
-                                src="https://images.unsplash.com/photo-1496200186974-4293800e2c20?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            <Image
+                                alt="Mandiri"
+                                src={MandiriLogo}
                                 width={158}
                                 height={48}
                                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                             />
-                            <img
-                                alt="SavvyCal"
-                                src="https://plus.unsplash.com/premium_photo-1720857673569-3b2d8c886096?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            <Image
+                                alt="Dana"
+                                src={DanaLogo}
                                 width={158}
                                 height={48}
                                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
                             />
-                            <img
-                                alt="Statamic"
-                                src="https://images.unsplash.com/photo-1612222869049-d8ec83637a3c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            <Image
+                                alt="QRIS"
+                                src={QrisLogo}
                                 width={158}
                                 height={48}
                                 className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"

@@ -121,7 +121,7 @@ export function NavigationMenuDemo() {
         <NavigationMenuItem>
           <Link href="/product" legacyBehavior passHref>
             <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${pathname === "/product" ? "font-bold" : "font-semibold"}`}>
-              Courses
+              Services
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

@@ -5,14 +5,17 @@ import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Skeleton } from "@/components/ui/skeleton"
 import Link from "next/link"
+import { ArrowRight, ShoppingCart, Megaphone, Ship, Smartphone } from "lucide-react"
+
+import Image from "next/image";
+
+import Hero1 from "@/assets/images/hero.png";
 
 export default function Hero() {
     const [loadedMain, setLoadedMain] = useState(false)
-    const [loadedLeft, setLoadedLeft] = useState(false)
-    const [loadedRight, setLoadedRight] = useState(false)
 
     return (
-        <div className="mt-28">
+        <div className="mt-14">
             <main>
                 <div className="relative isolate">
                     <svg
@@ -56,15 +59,16 @@ export default function Hero() {
                         <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 grid lg:flex lg:max-w-none lg:items-start">
                             <div className="relative w-full lg:max-w-md lg:shrink-0 xl:max-w-xl lg:ml-10 order-last lg:order-first pt-2 lg:pt-7">
                                 <h1 className="font-semibold tracking-tight text-outline text-4xl sm:text-5xl">
-                                    Find courses for your best future
+                                    Find services that you really need.
                                 </h1>
                                 <p className="mt-6 text-lg leading-8 text-outline lg:max-w-none">
                                     Your Future Awaits: Take Control of Your Destiny. Embrace Change, Seize New Opportunities, and Turn Your Dreams into Reality with Us. Don’t Let This Moment Pass!
                                 </p>
                                 <div className="mt-6 flex items-center gap-x-6">
                                     <Link href="/product">
-                                        <Button className="ring-1 ring-black rounded-full">
-                                                Browse Courses
+                                        <Button className="ring-1 ring-black rounded-full group">
+                                                Browse Services
+                                                <ArrowRight className="ml-1 h-4 w-2 transition-transform duration-300 group-hover:translate-x-1" />
                                         </Button>
                                     </Link>
                                 </div>
@@ -72,29 +76,42 @@ export default function Hero() {
                                 <div className="mt-4 lg:mt-7 block lg:flex">
                                     <div className="flex-none">
                                         <p className="text-lg leading-8 text-primary sm:max-w-md lg:max-w-none">
-                                            Popular Courses
+                                            Popular Services
                                         </p>
                                     </div>
                                     <div className="grow mt-4 lg:mt-0">
                                         <div className="flex flex-wrap">
+                                        {/* <div className="flex"> */}
                                             <div className="ml-3 mb-3 inline-flex">
                                                 <Link href="/product">
-                                                    <Button variant="alternative_1" className="ring-1 ring-black rounded-full">Sales</Button>
+                                                    <Button variant="alternative_1" className="ring-1 ring-black rounded-full">
+                                                        <ShoppingCart className="mr-1.5 h-4 w-4" />
+                                                        Toko
+                                                    </Button>
                                                 </Link>
                                             </div>
                                             <div className="ml-3 mb-3 inline-flex">
                                                 <Link href="/product">
-                                                    <Button variant="alternative_2" className="ring-1 ring-black rounded-full">Marketing</Button>
+                                                    <Button variant="alternative_2" className="ring-1 ring-black rounded-full">
+                                                        <Megaphone className="mr-1.5 h-4 w-4" />
+                                                        Restoran
+                                                    </Button>
                                                 </Link>
                                             </div>
                                             <div className="ml-3 mb-3 inline-flex">
                                                 <Link href="/product">
-                                                    <Button variant="alternative_3" className="ring-1 ring-black rounded-full">Eksportir</Button>
+                                                    <Button variant="alternative_3" className="ring-1 ring-black rounded-full">
+                                                        <Ship className="mr-1.5 h-4 w-4" />
+                                                        eLearning
+                                                    </Button>
                                                 </Link>
                                             </div>
                                             <div className="ml-3 mb-3 inline-flex">
                                                 <Link href="/product">
-                                                    <Button variant="alternative_4" className="ring-1 ring-black rounded-full">UMKM Go Digital</Button>
+                                                    <Button variant="alternative_4" className="ring-1 ring-black rounded-full">
+                                                        <Smartphone className="mr-1.5 h-4 w-4" />
+                                                        Faktur
+                                                    </Button>
                                                 </Link>
                                             </div>
                                         </div>
@@ -102,26 +119,26 @@ export default function Hero() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex justify-end gap-8 sm:-mt-44 sm:justify-start lg:mt-0 lg:pl-0 lg:mr-10 order-first lg:order-last">
+                            <div className="flex justify-end gap-8 sm:-mt-44 sm:justify-start lg:mt-4 lg:pl-0 lg:mr-10 order-first lg:order-last">
                                 <div className="relative">
                                     {/* Gambar utama */}
                                     {!loadedMain && (
                                     <Skeleton className="aspect-[3/2] h-80 rounded-3xl mb-5 animate-shimmer" />
                                     )}
-                                    <img
+                                    <Image
                                     loading="lazy"
                                     alt=""
-                                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&h=528&q=80"
-                                    className={`aspect-[3/2] w-full rounded-3xl bg-gray-900/5 object-cover shadow-lg ring-1 ring-primary mb-5 transition-opacity duration-500 ${
+                                    src={Hero1}
+                                    className={`aspect-[3/2] w-full object-cover transition-opacity duration-500 ${
                                         loadedMain ? "opacity-100" : "opacity-0 absolute top-0 left-0"
                                     }`}
-                                    onLoad={() => setLoadedMain(true)}
+                                    onLoad={() => setTimeout(() => setLoadedMain(true), 1000)}
                                     />
 
                                     {/* Gambar tambahan (hanya di lg) */}
                                     <div className="hidden lg:flex">
                                     {/* Left */}
-                                    {!loadedLeft && (
+                                    {/* {!loadedLeft && (
                                         <Skeleton className="aspect-auto h-72 w-[48.5%] rounded-3xl mr-2 animate-pulse" />
                                     )}
                                     <img
@@ -132,10 +149,10 @@ export default function Hero() {
                                         loadedLeft ? "opacity-100" : "opacity-0 absolute"
                                         }`}
                                         onLoad={() => setLoadedLeft(true)}
-                                    />
+                                    /> */}
 
                                     {/* Right */}
-                                    {!loadedRight && (
+                                    {/* {!loadedRight && (
                                         <Skeleton className="aspect-auto h-72 w-[48.5%] rounded-3xl ml-2 animate-pulse" />
                                     )}
                                     <img
@@ -146,10 +163,10 @@ export default function Hero() {
                                         loadedRight ? "opacity-100" : "opacity-0 absolute"
                                         }`}
                                         onLoad={() => setLoadedRight(true)}
-                                    />
+                                    /> */}
                                     </div>
                                 </div>
-                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
