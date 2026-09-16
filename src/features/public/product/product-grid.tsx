@@ -66,7 +66,7 @@ const products = [
     // More products...
   ]
   
-  export default function Products() {
+  export default function ProductGrid() {
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState<typeof products>([])
 

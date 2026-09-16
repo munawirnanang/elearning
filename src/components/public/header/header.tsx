@@ -1,8 +1,7 @@
 "use client"
 
 import * as React from "react"
-// import { MenubarDemo } from "@/components/shared/homepage-navigation-menubar"
-import { NavigationMenuDemo } from "@/components/shared/navigation/navigation-menu"
+import { NavigationMenuDemo } from "@/components/public/header/ui/navigation-menu"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import {
@@ -11,10 +10,10 @@ import {
   LogIn,
   UserCircle
 } from "lucide-react"
-import { CommandDialogDemo } from "@/components/shared/search/search"
+import { CommandDialogDemo } from "@/components/public/search/search-command"
 // import { Separator } from "@/components/ui/separator"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-import { AppSidebar } from "@/components/shared/navigation/navigation-menu-sidebar"
+import { AppSidebar } from "@/components/public/header/ui/navigation-menu-sidebar"
 import { useIsMobile } from "@/hooks/use-mobile"
 // import { Input } from "@/components/ui/input"
 // import { Label } from "@/components/ui/label"

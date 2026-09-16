@@ -1,17 +1,14 @@
-import Hero from '@/components/shared/hero/hero';
-import Product from '@/components/shared/product/product';
-import Feature from '@/components/shared/feature/feature';
-import Faq from '@/components/shared/faq/faq';
-import Testimonials from '@/components/shared/testimonial/testimonials';
+import Navigation from '@/components/public/header/header';
+import Footer from '@/components/public/footer/footer';
+
+import Home from '@/features/public/home/home';
 
 export default function HomePage() {
   return (
     <>
-      <Hero />
-      <Product />
-      <Feature />
-      <Faq />
-      <Testimonials />
+      <Navigation />
+      <Home />
+      <Footer />
     </>
   );
 }

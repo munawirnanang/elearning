@@ -18,9 +18,9 @@ import {
   Wallet,
 } from "lucide-react"
 
-import { NavProjects } from "@/components/nav-projects"
-import { NavUser } from "@/components/nav-user"
-import { TeamSwitcher } from "@/components/team-switcher"
+import { NavProjects } from "@/components/protected/sidebar/ui/nav-projects"
+import { NavUser } from "@/components/protected/sidebar/ui/nav-user"
+import { TeamSwitcher } from "@/components/protected/sidebar/ui/team-switcher"
 import {
   Sidebar,
   SidebarContent,

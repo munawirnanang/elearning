@@ -3,13 +3,10 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
-import { Skeleton } from "@/components/ui/skeleton"
 import Link from "next/link"
+import Image from "next/image"
+import Hero1 from "@/assets/images/hero.png"
 import { ArrowRight, ShoppingCart, Megaphone, Ship, Smartphone } from "lucide-react"
-
-import Image from "next/image";
-
-import Hero1 from "@/assets/images/hero.png";
 
 export default function Hero() {
     const [loadedMain, setLoadedMain] = useState(false)
@@ -52,7 +49,7 @@ export default function Hero() {
                             'polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)',
                         }}
                         className="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
-                        />
+                    />
                 </div>
                 <div className="overflow-hidden">
                     <div className="mx-auto max-w-7xl pt-8 sm:pt-60 lg:pt-10 px-6 sm:px-16 lg:px-8">
@@ -81,7 +78,6 @@ export default function Hero() {
                                     </div>
                                     <div className="grow mt-4 lg:mt-0">
                                         <div className="flex flex-wrap">
-                                        {/* <div className="flex"> */}
                                             <div className="ml-3 mb-3 inline-flex">
                                                 <Link href="/product">
                                                     <Button variant="alternative_1" className="ring-1 ring-black rounded-full">
@@ -115,56 +111,21 @@ export default function Hero() {
                                                 </Link>
                                             </div>
                                         </div>
-                                    
                                     </div>
                                 </div>
                             </div>
                             <div className="flex justify-end gap-8 sm:-mt-44 sm:justify-start lg:mt-4 lg:pl-0 lg:mr-10 order-first lg:order-last">
                                 <div className="relative">
-                                    {/* Gambar utama */}
-                                    {!loadedMain && (
-                                    <Skeleton className="aspect-[3/2] h-80 rounded-3xl mb-5 animate-shimmer" />
-                                    )}
                                     <Image
-                                    loading="lazy"
-                                    alt=""
-                                    src={Hero1}
-                                    className={`aspect-[3/2] w-full object-cover transition-opacity duration-500 ${
-                                        loadedMain ? "opacity-100" : "opacity-0 absolute top-0 left-0"
-                                    }`}
-                                    onLoad={() => setTimeout(() => setLoadedMain(true), 1000)}
+                                        loading="lazy"
+                                        alt=""
+                                        src={Hero1}
+                                        className={`aspect-[3/2] w-full object-cover transition-opacity duration-500 ${
+                                            loadedMain ? "opacity-100" : "opacity-0 absolute top-0 left-0"
+                                        }`}
+                                        onLoad={() => setTimeout(() => setLoadedMain(true), 1000)}
                                     />
 
-                                    {/* Gambar tambahan (hanya di lg) */}
-                                    <div className="hidden lg:flex">
-                                    {/* Left */}
-                                    {/* {!loadedLeft && (
-                                        <Skeleton className="aspect-auto h-72 w-[48.5%] rounded-3xl mr-2 animate-pulse" />
-                                    )}
-                                    <img
-                                        loading="lazy"
-                                        alt=""
-                                        src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&h=528&q=80"
-                                        className={`aspect-auto h-72 w-[48.5%] rounded-3xl bg-gray-900/5 object-cover shadow-lg ring-1 ring-primary mr-2 transition-opacity duration-500 ${
-                                        loadedLeft ? "opacity-100" : "opacity-0 absolute"
-                                        }`}
-                                        onLoad={() => setLoadedLeft(true)}
-                                    /> */}
-
-                                    {/* Right */}
-                                    {/* {!loadedRight && (
-                                        <Skeleton className="aspect-auto h-72 w-[48.5%] rounded-3xl ml-2 animate-pulse" />
-                                    )}
-                                    <img
-                                        loading="lazy"
-                                        alt=""
-                                        src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&h=528&q=80"
-                                        className={`aspect-auto h-72 w-[48.5%] rounded-3xl bg-gray-900/5 object-cover shadow-lg ring-1 ring-primary ml-2 transition-opacity duration-500 ${
-                                        loadedRight ? "opacity-100" : "opacity-0 absolute"
-                                        }`}
-                                        onLoad={() => setLoadedRight(true)}
-                                    /> */}
-                                    </div>
                                 </div>
                             </div>
                         </div>

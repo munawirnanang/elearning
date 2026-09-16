@@ -7,7 +7,6 @@ import { Label } from "@/components/ui/label"
 import { Toggle } from "@/components/ui/toggle"
 import { Sun, Moon } from "lucide-react"
 import { useTheme } from "next-themes"
-
 import {
   Drawer,
   DrawerClose,
@@ -18,22 +17,16 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
-
-import Image from "next/image";
-
-import BniLogo from "@/assets/images/bni_logo.png";
-import MandiriLogo from "@/assets/images/mandiri_logo.png";
-import DanaLogo from "@/assets/images/dana_logo.png";
-import QrisLogo from "@/assets/images/qris_logo.png";
-
 import { CheckIcon, HandThumbUpIcon, UserIcon, ShareIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid'
-
+import Image from "next/image"
+import BniLogo from "@/assets/images/bni_logo.png"
+import MandiriLogo from "@/assets/images/mandiri_logo.png"
+import DanaLogo from "@/assets/images/dana_logo.png"
+import QrisLogo from "@/assets/images/qris_logo.png"
 import {
   DropdownMenu,
   DropdownMenuContent,
-  // DropdownMenuItem,
   DropdownMenuLabel,
-  // DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 

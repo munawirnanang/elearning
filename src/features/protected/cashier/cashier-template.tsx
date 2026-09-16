@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import { cn } from "@/lib/utils"
-import { AppSidebar } from "@/components/app-sidebar"
+import { AppSidebar } from "@/components/protected/sidebar/app-sidebar"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -320,8 +320,9 @@ export default function Cashier() {
 
   const orderItemCount = order.reduce((sum, item) => sum + item.qty, 0)
 
-  const orderCard = (
+  const renderOrderCard = (showHeader: boolean = true) => (
             <Card className="lg:sticky lg:top-4 m-4 rounded-2xl">
+              {showHeader && (
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <ShoppingCart className="size-5" />
@@ -337,6 +338,7 @@ export default function Cashier() {
                     }
                     tone={checkoutStep === "processing" ? "pending" : "ok"}
                   /> */}
+                  {order.length > 0 && (
                   <AlertDialog>
                     <AlertDialogTrigger asChild>
                       <Button
@@ -362,8 +364,10 @@ export default function Cashier() {
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
+                  )}
                 </CardTitle>
               </CardHeader>
+              )}
               {manageMode ? (
                 <CardContent className="flex h-96 flex-col items-center justify-center gap-3 overflow-y-auto text-center">
                   <p className="text-sm text-muted-foreground">
@@ -700,8 +704,8 @@ export default function Cashier() {
             </div>
           </div>
         </header>
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-12 h-full">
-          <div className="lg:col-span-8 p-4">
+        <div className="flex flex-col gap-4 lg:flex-row h-full">
+          <div className="min-w-0 flex-1 p-4">
             <div className="flex min-w-0 flex-1 flex-col gap-4">
               <div className="relative min-w-0 w-full">
                 {canScrollLeft && (
@@ -736,7 +740,7 @@ export default function Cashier() {
                         >
                           <span
                             className={cn(
-                              "flex size-11 items-center justify-center rounded-full hidden lg:flex",
+                              "flex size-11 items-center justify-center rounded-full hidden xl:flex",
                               isActive
                                 ? "bg-primary text-primary-foreground"
                                 : "bg-background text-muted-foreground"
@@ -856,7 +860,7 @@ export default function Cashier() {
                           <img
                               src={item.image}
                               alt={item.name}
-                              className="h-32 w-full rounded-2xl object-cover"
+                              className="aspect-[19/20] w-full rounded-2xl object-cover"
                           />
                           <div>
                             <p className="text-sm font-medium text-foreground">
@@ -894,8 +898,8 @@ export default function Cashier() {
               </div>
             </div>
           </div>
-          <div className="hidden lg:block lg:col-span-4 bg-black/5 lg:sticky lg:top-4">
-            {orderCard}
+          <div className="hidden lg:block lg:w-96 lg:shrink-0 bg-black/5 lg:sticky lg:top-4">
+            {renderOrderCard(true)}
           </div>
         </div>
 
@@ -940,7 +944,7 @@ export default function Cashier() {
                   <DrawerTitle className="sr-only">
                     Order Details &amp; Payment
                   </DrawerTitle>
-                  <div className="overflow-y-auto">{orderCard}</div>
+                  <div className="overflow-y-auto">{renderOrderCard(false)}</div>
                 </DrawerContent>
               </Drawer>
             </div>

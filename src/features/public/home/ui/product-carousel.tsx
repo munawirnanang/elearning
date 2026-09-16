@@ -58,7 +58,7 @@ const services: Service[] = [
     },
 ]
 
-export default function Product() {
+export default function ProductCarousel() {
     const scrollRef = useRef<HTMLDivElement>(null)
     const [canScrollLeft, setCanScrollLeft] = useState(false)
     const [canScrollRight, setCanScrollRight] = useState(false)
